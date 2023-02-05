@@ -1,0 +1,487 @@
+.section-one {
+    margin-bottom: 3rem;
+    
+    &__container {
+        position: relative;
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__nav-container {
+        font-size: 1.8rem;
+        color: var(--color-grey-light-4);
+
+        position: absolute;
+        top: 10%;
+        right: 15%;
+
+        a {
+            text-decoration: none;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &__sub-title {
+        font-size: 3.5rem;
+        color: #fff;
+        text-align: right;
+
+        position: absolute;
+        top: 20%;
+        right: 10%;
+
+        h1:first-child {
+            text-decoration: underline;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+
+        padding: 1rem 1.5rem;
+    }
+}
+
+.section-two {
+    margin-bottom: 3rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-left: 6rem;
+            font-size: 3.5rem;
+            color: #000;
+        }
+
+        .yellow-line {
+            margin-left: 6rem;
+            width: 16rem;
+            height: 0.8rem;
+            background-color: var(--color-yellow-1);
+        }
+
+        h4 {
+            margin-top: 1rem;
+            margin-left: 6rem;
+            color: #000;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container {
+        padding: 1rem 4rem;
+
+        display: flex;
+    }
+
+    &__card {
+        flex: 1;
+    }
+
+    &__btn-div {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0rem 4rem;
+    }
+
+    &__btn {
+        padding: 1rem 2rem;
+        background-color: #fff;
+        border: 1px solid var(--color-yellow-1);
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+    }
+}
+
+.section-three {
+    margin-bottom: 3rem;
+
+    &__container {
+        position: relative;
+        text-align: center;
+    }
+
+    &__logo {
+        position: absolute;
+        right: 10%;
+        top: 15%;
+    }
+
+    h1 {
+        font-size: 5rem;
+        color: #fff;
+        text-align: left;
+
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+
+    &__text-one {
+        position: absolute;
+        bottom: 35%;
+        left: 10%;
+
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: left;
+    }
+
+    &__text-two {
+        position: absolute;
+        bottom: 20%;
+        right: 15%;
+
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: left;
+    }
+
+    &__btn {
+        position:absolute;
+        bottom: 10%;
+        right: 10%;
+
+        padding: 1rem 2rem;
+        border: 1px solid #000;
+        background-color: var(--color-grey-light-3);
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+    }
+}
+
+.section-four {
+    margin-bottom: 3rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-left: 6rem;
+            font-size: 3.5rem;
+            color: #000;
+        }
+
+        .black-line {
+            margin-left: 6rem;
+            width: 16rem;
+            height: 0.8rem;
+            background-color: #000;
+        }
+
+        h4 {
+            margin-top: 1rem;
+            margin-left: 6rem;
+            color: #000;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem 6rem 2rem;
+
+        &:last-child {
+            gap: 1rem;
+        }
+
+        p {
+            flex: 1;
+            font-size: 1.7rem;
+            color: #000;
+            align-self: center;
+        }
+
+        img {
+            box-shadow: var(--shadow-light);
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__card {
+        flex: 1;
+        background-color: var(--color-grey-light-2);
+        padding: 2rem 3rem;
+
+        &:last-child {
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--color-grey-dark-1);
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: var(--color-grey-dark-2);
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        padding: 1rem 2rem;
+        border: 1px solid var(--color-grey-dark-1);
+        background-color: var(--color-grey-light-1);
+        text-decoration: none;
+        color: var(--color-grey-dark-1);
+        font-size: 1.2rem;
+    }
+}
+
+.section-five {
+    margin-bottom: 3rem;
+
+    &__container {
+        position: relative;
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+
+    h1 {
+        font-size: 5rem;
+        color: #fff;
+        text-align: right;
+
+        position: absolute;
+        top: 12%;
+        right: 10%;
+    }
+
+    p {
+        position: absolute;
+        bottom: 15%;
+        left: 10%;
+
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: left;
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+
+        padding: 1rem 2rem;
+        border: 1px solid var(--color-grey-dark-1);
+        background-color: #fff;
+        text-decoration: none;
+        color: var(--color-grey-dark-1);
+        font-size: 1.2rem;
+    }
+}
+
+.section-six {
+    padding-bottom: 3rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-left: 6rem;
+            font-size: 3.5rem;
+            color: #000;
+        }
+
+        .blue-line {
+            margin-left: 6rem;
+            width: 16rem;
+            height: 0.8rem;
+            background-color: var(--color-blue-1);
+        }
+
+        h4 {
+            margin-top: 1rem;
+            margin-left: 6rem;
+            color: #000;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container {
+        padding: 1rem 4rem;
+
+        display: flex;
+    }
+
+    &__card {
+        flex: 1;
+    }
+
+    &__btn-div {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0rem 4rem;
+    }
+
+    &__btn {
+        padding: 1rem 2rem;
+        background-color: #fff;
+        border: 1px solid var(--color-blue-1);
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+    }
+}
+
+.section-seven {
+    padding-bottom: 3rem;
+    &__container {
+        position: relative;
+        text-align: center;
+
+        h1 {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+
+            color: #fff;
+            font-size: 5rem;
+            text-align: left;
+        }
+
+        p {
+            position: absolute;
+            bottom: 15%;
+            right: 25%;
+
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+
+        padding: 1rem 2rem;
+        background-color: #fff;
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+    }
+}
+
+.section-eight {
+    margin-bottom: 3rem;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-left: 6rem;
+            font-size: 3.5rem;
+            color: #000;
+        }
+
+        .green-line {
+            margin-left: 6rem;
+            width: 16rem;
+            height: 0.8rem;
+            background-color: var(--color-green-1);
+        }
+
+        h4 {
+            margin-top: 1rem;
+            margin-left: 6rem;
+            color: #000;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem 6rem 2rem;
+
+        &:last-child {
+            justify-content: flex-start;
+        }
+
+        p {
+            flex: 1;
+            font-size: 1.7rem;
+            color: #000;
+            align-self: center;
+        }
+
+        img {
+            box-shadow: var(--shadow-light);
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__card {
+        background-color: var(--color-grey-light-2);
+        padding: 2rem 3rem;
+        width: 50%;
+
+        &:last-child {
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--color-grey-dark-1);
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: var(--color-grey-dark-2);
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        padding: 1rem 2rem;
+        border: 1px solid var(--color-grey-dark-1);
+        background-color: var(--color-grey-light-1);
+        text-decoration: none;
+        color: var(--color-grey-dark-1);
+        font-size: 1.2rem;
+    }
+}

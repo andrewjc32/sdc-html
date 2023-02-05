@@ -1,0 +1,218 @@
+////////////////////////////////////////
+// SIDE NAVIGATION
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-grey-light-2);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--color-grey-light-4);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-dark-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 6rem;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
+    }
+
+    &__chevron {
+        color: var(--color-yellow-1);
+        margin-right: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            visibility: hidden;
+        }
+    }
+
+    &__logo-li {
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        max-width: 250px;
+        margin: 0rem auto 3rem;
+        padding: 1rem 2rem 1rem 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0rem auto;
+        }
+    }
+
+    &__sub-menu {
+        border: 1.5px solid var(--color-grey-light-4);
+        background-color: var(--color-grey-light-3);
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    &__sub-menu-list {
+        font-size: 1.2rem;
+        list-style: none;
+        margin: 3.5rem 3rem 6rem;
+        border-bottom: 1px solid var(--color-grey-light-4);
+
+        .sub-menu-item {
+            height: 100%;
+            width: 3px;
+
+            &:last-child {
+                padding-bottom: 2rem;
+            }
+
+            .sub-menu-link {
+                color: var(--color-grey-dark-1);
+                text-decoration: none;
+                display: block;
+                padding: 1rem 3rem;
+
+                display: flex;
+                align-items: center;
+                justify-content: start;
+
+                span {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+.sdc-sidebar-logo {
+    @media only screen and (min-width: $bp-medium) {
+        display: none;
+    }
+}
+
+////////////////////////////////////////
+// SDC CARD
+
+.sdc-card {
+    padding-bottom: 2rem;
+    
+    &:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__img-container {
+        padding: 3rem 2rem 2rem;
+        border-bottom: 4px solid var(--color-yellow-1);
+        margin: 0rem 2rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        box-shadow: var(--shadow-light);
+    }
+
+    &__text {
+        padding: 2rem;
+        font-size: 1.5rem;
+        color: #000;
+    }
+}
+
+.footer {
+    padding: 3rem 5rem;
+    background-color: var(--color-grey-light-3);
+
+    &__container {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        li, p {
+            font-size: 1.5rem;
+            color: var(--color-grey-dark-2);
+            list-style: none;
+            
+            a {
+                text-decoration: none;
+                color: var(--color-grey-dark-2);
+            }
+        }
+    }
+
+    &__icon {
+        margin-left: 1.5rem;
+    }
+}

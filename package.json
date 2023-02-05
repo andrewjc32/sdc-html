@@ -1,0 +1,21 @@
+{
+    "name": "SDC",
+    "version": "1.0.0",
+    "description": "Pagina para promocionar la empresa Servicios de Dragados y Construcciones SAS",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w",
+        "devserver": "live-server",
+        "start": "npm-run-all --parallel devserver watch:sass",
+        "compile:sass": "node-sass sass/main.scss css/style.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+        "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    },
+    "author": "Andrew",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.1",
+        "node-sass": "^8.0.0"
+    }
+}
