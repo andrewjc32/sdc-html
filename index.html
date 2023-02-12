@@ -10,6 +10,8 @@
     <link href="node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <title>Servicios de Dragados y Construcciones SAS</title>
   </head>
   <body>
@@ -35,10 +37,14 @@
                         </a>
                     </li>
                     <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
+                        <a href="/servicios.html" class="side-nav__link servicios-link">
                             <span>SERVICIOS</span>
                             <i class="fa-solid fa-chevron-right side-nav__chevron"></i>
                         </a>
+                        <ul class="side-nav__sub-item">
+                            <li class="side-nav__sub-item-link"><a href="/servicios.html">Lo que nos mueve</a></li>
+                            <li class="side-nav__sub-item-link"><a href="#">Maquinaria y equipos</a></li>
+                        </ul>
                     </li>
                     <li class="side-nav__item">
                         <a href="#" class="side-nav__link">
@@ -66,9 +72,6 @@
                     </li>
                 </ul>
 
-                <!-- <div class="legal">
-                    &copy; 2023 por SDC. Todos los derechos reservados
-                </div> -->
                 <div class="side-nav__sub-menu">
                     <ul class="side-nav__sub-menu-list">
                         <li class="sub-menu-item">
@@ -355,3 +358,9 @@
     </div>
   </body>
 </html>
+
+<script>
+    $('.servicios-link').click(function(){
+        $('.side-nav__sub-item').toggleClass("show");
+    })
+</script>
