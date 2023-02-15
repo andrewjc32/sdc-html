@@ -37,6 +37,7 @@
     &__text {
         flex: 2;
         font-size: 1.7rem;
+        min-width: 50%;
         color: var(--color-grey-dark-1);
         align-self: center;
     }
@@ -57,6 +58,10 @@
       
       /* Hide the images by default */
       .mySlides {
+        display: none;
+      }
+
+      .img-footer-text {
         display: none;
       }
       
@@ -90,37 +95,32 @@
       /* Caption text */
       .text {
         color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
+        background-color: var(--color-yellow-1);
+        font-size: 1.5rem;
+        padding: 3rem 2rem;
         position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
+        top: 10%;
+        width: 35%;
+        text-align: left;
       }
-      
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
+
+      .dot-container {
+        max-width: 90%;
+        margin: auto;
       }
       
       /* The dots/bullets/indicators */
       .dot {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
+        height: 7rem;
+        width: 7rem;
         display: inline-block;
-        transition: background-color 0.6s ease;
+        opacity: 0.7;
+        transition: opacity 0.6s ease;
       }
       
       .active, .dot:hover {
-        background-color: #717171;
+        opacity: 1;
       }
       
       /* Fading animation */
@@ -128,9 +128,63 @@
         animation-name: fade;
         animation-duration: 1.5s;
       }
+
+      .img-footer-container {
+        width: 90%;
+        margin: auto;
+        background-color: var(--color-grey-light-4);
+        padding: 3rem 4rem;
+      }
+
+      .img-footer-text {
+        font-size: 1.3rem;
+      }
       
       @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
       }
+}
+
+.servicios-section-three {
+  &__container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+  }
+
+  &__cards-item {
+    display: flex;
+    padding: 2rem;
+    
+    @media (min-width: 30rem){
+      width: 100%;
+    }
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+  }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-top: 0.5rem solid var(--color-yellow-1);
+    width: 100%;
+    padding-bottom: 3rem;
+  
+    p {
+      color: #000;
+      font-size: 2rem;
+    }
+  }
 }
