@@ -44,6 +44,11 @@
 
     &__img {
         flex: 1;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
     }
 }
 
@@ -180,11 +185,84 @@
     overflow: hidden;
     border-top: 0.5rem solid var(--color-yellow-1);
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   
     p {
       color: #000;
       font-size: 2rem;
+    }
+  }
+
+  .servicios-arrow {
+    cursor: pointer;
+    color: var(--color-grey-light-4);
+    text-decoration: underline;
+  }
+}
+
+.servicios-section-four {
+  background-color: var(--color-grey-light-2);
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 4rem 8rem 0rem;
+  }
+
+  h4 {
+    color: var(--color-grey-dark-1);
+    font-size: 2rem;
+  }
+
+  &__div {
+    padding: 2rem 0rem;
+    border-bottom: 1px solid var(--color-grey-dark-2);
+
+    font-size: 1.3rem;
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  &__licencia-dimar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 3rem;
+
+    .servicios-section-four-dimar-img {
+      flex: 1;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    p {
+      flex: 1;
+
+      font-size: 1.3rem;
+    }
+  }
+
+  &__ruc {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    .ruc-img {
+      img {
+        max-width: 30%;
+        height: auto;
+        margin-left: 5rem;
+      }
     }
   }
 }

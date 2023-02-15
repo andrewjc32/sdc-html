@@ -143,6 +143,11 @@
                 align-items: center;
                 justify-content: start;
 
+                &__icon {
+                    width: 4rem;
+                    height: auto;
+                }
+
                 span {
                     margin-left: 1rem;
                 }
@@ -228,7 +233,7 @@
 
 .footer {
     padding: 3rem 5rem;
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-grey-light-4);
 
     &__container {
         margin-bottom: 2rem;

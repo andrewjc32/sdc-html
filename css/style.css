@@ -176,6 +176,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: start; }
+        .side-nav__sub-menu-list .sub-menu-item .sub-menu-link__icon {
+          width: 4rem;
+          height: auto; }
         .side-nav__sub-menu-list .sub-menu-item .sub-menu-link span {
           margin-left: 1rem; }
   .side-nav__icon {
@@ -229,7 +232,7 @@ footer {
 
 .footer {
   padding: 3rem 5rem;
-  background-color: var(--color-grey-light-3); }
+  background-color: var(--color-grey-light-4); }
   .footer__container {
     margin-bottom: 2rem;
     display: flex;
@@ -626,6 +629,9 @@ footer {
     align-self: center; }
   .servicios-section-one__img {
     flex: 1; }
+    .servicios-section-one__img img {
+      max-width: 100%;
+      height: auto; }
 
 .servicios-section-two {
   padding-top: 3rem;
@@ -729,7 +735,50 @@ footer {
   overflow: hidden;
   border-top: 0.5rem solid var(--color-yellow-1);
   width: 100%;
-  padding-bottom: 3rem; }
+  padding-bottom: 2rem; }
   .servicios-section-three__card p {
     color: #000;
     font-size: 2rem; }
+
+.servicios-section-three .servicios-arrow {
+  cursor: pointer;
+  color: var(--color-grey-light-4);
+  text-decoration: underline; }
+
+.servicios-section-four {
+  background-color: var(--color-grey-light-2); }
+  .servicios-section-four__container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 8rem 0rem; }
+  .servicios-section-four h4 {
+    color: var(--color-grey-dark-1);
+    font-size: 2rem; }
+  .servicios-section-four__div {
+    padding: 2rem 0rem;
+    border-bottom: 1px solid var(--color-grey-dark-2);
+    font-size: 1.3rem; }
+    .servicios-section-four__div:last-child {
+      border-bottom: none; }
+  .servicios-section-four__licencia-dimar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem; }
+    .servicios-section-four__licencia-dimar .servicios-section-four-dimar-img {
+      flex: 1; }
+      .servicios-section-four__licencia-dimar .servicios-section-four-dimar-img img {
+        max-width: 100%;
+        height: auto; }
+    .servicios-section-four__licencia-dimar p {
+      flex: 1;
+      font-size: 1.3rem; }
+  .servicios-section-four__ruc {
+    display: flex;
+    flex-direction: column; }
+    .servicios-section-four__ruc p {
+      font-size: 1.3rem; }
+    .servicios-section-four__ruc .ruc-img img {
+      max-width: 30%;
+      height: auto;
+      margin-left: 5rem; }
