@@ -782,3 +782,41 @@ footer {
       max-width: 30%;
       height: auto;
       margin-left: 5rem; }
+
+.maquinaria-section-one {
+  padding: 6rem 6rem; }
+  .maquinaria-section-one__container {
+    display: flex;
+    flex-direction: column; }
+    .maquinaria-section-one__container h2 {
+      font-size: 3rem;
+      color: #000;
+      border-bottom: 1px solid var(--color-yellow-1);
+      margin-bottom: 3rem; }
+  .maquinaria-section-one__img-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem; }
+    .maquinaria-section-one__img-container__div {
+      flex: 1;
+      min-width: 100px; }
+      .maquinaria-section-one__img-container__div img {
+        max-width: 100%;
+        height: auto; }
+  .maquinaria-section-one .border-bottom {
+    border-bottom: 1px solid var(--color-grey-dark-3); }
+
+.somos-sdc-section-one__container {
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column; }
+  .somos-sdc-section-one__container img {
+    max-width: 100%;
+    height: auto; }
+
+.somos-sdc-section-one__text {
+  font-size: 1.5rem;
+  color: var(--color-grey-dark-1); }

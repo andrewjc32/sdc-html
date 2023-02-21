@@ -1,0 +1,37 @@
+.maquinaria-section-one {
+    padding: 6rem 6rem;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 3rem;
+            color: #000;
+            border-bottom: 1px solid var(--color-yellow-1);
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__img-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+        margin-bottom: 2rem;
+
+        &__div {
+            flex: 1;
+            min-width: 100px;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid var(--color-grey-dark-3);
+    }
+}
