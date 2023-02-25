@@ -31,9 +31,9 @@
     justify-content: flex-start;
     background: #fff;
 
-    @media only screen and (min-width: $bp-largest) {
-        flex: 0 0 10%;
-    }
+    // @media only screen and (min-width: $bp-largest) {
+    //     flex: 0 0 10%;
+    // }
 
     @media only screen and (min-width: $bp-medium) {
         border-right: 1.5px solid var(--color-grey-light-4);

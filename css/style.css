@@ -66,9 +66,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   background: #fff; }
-  @media only screen and (min-width: 75em) {
-    .sdc-sidebar {
-      flex: 0 0 10%; } }
   @media only screen and (min-width: 56.25em) {
     .sdc-sidebar {
       border-right: 1.5px solid var(--color-grey-light-4); } }
