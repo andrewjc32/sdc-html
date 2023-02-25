@@ -867,3 +867,46 @@ footer {
   .proyectos-section-two__img img {
     width: 100%;
     height: auto; }
+
+.nosotros-section-one__container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 6rem 2rem;
+  color: var(--color-grey-dark-1);
+  font-size: 1.7rem; }
+  .nosotros-section-one__container p {
+    width: 50%;
+    margin-bottom: 3rem; }
+
+.nosotros-section-one__green-line {
+  background-color: var(--color-green-1);
+  height: 3px;
+  width: 25%; }
+
+.nosotros-section-two__container {
+  padding: 0rem 6rem 4rem; }
+  .nosotros-section-two__container h2 {
+    font-size: 2rem;
+    color: var(--color-grey-dark-1); }
+
+.nosotros-section-two__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nosotros-section-two__img-container img {
+    width: 30%;
+    max-width: 300px;
+    height: auto; }
+
+.nosotros-section-two__text-container {
+  display: flex;
+  margin-top: 1rem; }
+  .nosotros-section-two__text-container__img {
+    max-width: 8rem; }
+    .nosotros-section-two__text-container__img img {
+      width: 100%;
+      height: auto; }
+  .nosotros-section-two__text-container__text {
+    max-width: fit-content;
+    font-size: 1.7rem;
+    color: var(--color-grey-dark-1); }
