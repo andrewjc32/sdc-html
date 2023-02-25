@@ -1,0 +1,59 @@
+.proyectos-section-two {
+    &__container {
+        display: flex;
+        gap: 2rem;
+        color: var(--color-grey-dark-1);
+        border-bottom: 1px solid var(--color-blue-1);
+        padding: 2rem 0 4rem;
+        margin: 4rem 6rem;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__item-one {
+        flex: 1;
+    }
+
+    &__item-two {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        padding: 1rem 0;
+        border-bottom: 3px solid var(--color-blue-1);
+    }
+
+    &__img-container {
+        flex: 10;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    &__img {
+        max-width: 45%;
+        
+        @media only screen and (min-width: 1700px) {
+            max-width: 30rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
