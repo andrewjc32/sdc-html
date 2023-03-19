@@ -92,9 +92,12 @@ footer {
   list-style: none;
   margin-top: 3.5rem;
   margin-bottom: 3.5rem; }
-  @media only screen and (max-width: 56.25em) {
+  @media (max-width: 56.25em) {
     .side-nav {
-      display: none; } }
+      display: none;
+      margin: 0; }
+      .side-nav.open {
+        display: block; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
@@ -134,9 +137,7 @@ footer {
     @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: space-between;
-        padding: 2rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .side-nav__link:link, .side-nav__link:visited {
+        padding: 2rem;
         flex-direction: column;
         padding: 1.5rem .5rem; } }
   .side-nav__chevron {
@@ -201,9 +202,15 @@ footer {
     width: 100%;
     transform: scaleY(1);
     display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__sub-item {
+        text-align: center; } }
     .side-nav__sub-item-link {
       padding-left: 6rem;
       padding-bottom: 1rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__sub-item-link {
+          padding-left: 0; } }
       .side-nav__sub-item-link:hover {
         background-color: var(--color-grey-light-2) !important; }
       .side-nav__sub-item-link:first-child {
@@ -215,6 +222,29 @@ footer {
 @media only screen and (min-width: 56.25em) {
   .sdc-sidebar-logo {
     display: none; } }
+
+.hamburger {
+  display: none;
+  cursor: pointer; }
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: black; }
+
+@media (max-width: 56.25em) {
+  .hamburger {
+    display: block; }
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0; }
+  .hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); }
+  .hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); } }
 
 .sdc-card {
   padding-bottom: 2rem; }

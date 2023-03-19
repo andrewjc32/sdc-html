@@ -14,10 +14,18 @@
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
 
-    @media only screen and (max-width: $bp-medium) {
-        // display: flex;
-        // margin: 0;
+    // @media only screen and (max-width: $bp-medium) {
+    //     display: flex;
+    //     margin: 0;
+    // }
+
+    @media(max-width: $bp-medium) {
         display: none;
+        margin: 0;
+
+        &.open {
+            display: block;
+        }
     }
 
     &__item {
@@ -77,12 +85,14 @@
         @media only screen and (max-width: $bp-medium) {
             justify-content: space-between;
             padding: 2rem;
-        }
-
-        @media only screen and (max-width: $bp-small) {
             flex-direction: column;
             padding: 1.5rem .5rem;
         }
+
+        // @media only screen and (max-width: $bp-small) {
+        //     flex-direction: column;
+        //     padding: 1.5rem .5rem;
+        // }
     }
 
     &__chevron {
@@ -176,9 +186,17 @@
         transform: scaleY(1);
         display: none;
 
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+        }
+
         &-link {
             padding-left: 6rem;
             padding-bottom: 1rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                padding-left: 0;
+            }
 
             &:hover {
                 background-color: var(--color-grey-light-2) !important;
@@ -201,6 +219,35 @@
         display: none;
     }
 }
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: black;
+}
+
+@media(max-width: $bp-medium){
+    .hamburger{
+      display: block;
+    }
+   .hamburger.open .bar:nth-child(2){
+      opacity: 0;
+    }
+   .hamburger.open .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+   .hamburger.open .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
 
 ////////////////////////////////////////
 // SDC CARD

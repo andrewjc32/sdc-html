@@ -94,6 +94,12 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
             <main class="sdc-content">
                 <section class="sdc-content-header">
@@ -582,4 +588,17 @@
     $('.servicios-link').click(function(){
         $('.side-nav__sub-item').toggleClass("show");
     })
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".side-nav");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        navMenu.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        navMenu.classList.remove("open");
+    }));
 </script>

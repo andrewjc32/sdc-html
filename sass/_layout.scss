@@ -30,6 +30,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background: #fff;
+    // border-right: 1.5px solid var(--color-grey-light-4);
 
     @media only screen and (min-width: 2000px) {
         flex: 0 0 14%;
@@ -39,6 +40,7 @@
         border-right: 1.5px solid var(--color-grey-light-4);
     }
 }
+
 .sdc-content {
     flex: 1;
 
