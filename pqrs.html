@@ -103,7 +103,96 @@
             </nav>
             
             <main class="sdc-content">
-                
+                <section class="sdc-content-header">
+                    <div class="sdc-content-header__container">
+                        <p class="sdc-content-header__text"><a href="#">English</a></p>
+                        <p class="sdc-content-header__text"> | </p>
+                        <p class="sdc-content-header__text"><a href="/pqrs.html">PQRS</a></p>
+                        <p class="sdc-content-header__text"> | </p>
+                        <a class="sdc-content-header__text" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </section>
+                <section class="servicios-section-one">
+                    <div class="section-two__title">
+                        <h1>PQRS</h1>
+                        <div class="yellow-line"></div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="padding: 4rem 6rem 0rem 8rem;">
+                        <p style="font-size: 1.8rem;">
+                            <strong>
+                                En Servicios de Dragados y Construcciones reconocemos la importancia de
+                                nuestros clientes y empleados. Son nuestra razón de ser, contáctanos para darle
+                                la mejor atención a tus comentarios. Tu solicitud será atendida pronto.
+                            </strong>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="servicios-section-one">
+                    <div>
+                        <form>
+                            <div class="section-two__title">
+                                <h1>Información personal</h1>
+                                <div style="height: 1px" class="yellow-line"></div>
+                            </div>
+                            <div>
+                                <div class="contacto-form-container">
+                                    <div class="row">
+                                        <div id="nombres" class="float-container">
+                                            <label for="nombres">Nombre(s)</label>
+                                            <input type="text" id="nombres" data-placeholder="Nombre(s)">
+                                        </div>
+                                        <div id="apellidos" class="float-container">
+                                            <label for="apellidos">Apellido(s)</label>
+                                            <input type="text" id="apellidos" data-placeholder="Apellido(s)">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="correo" class="float-container">
+                                            <label for="correo">Correo Electrónico</label>
+                                            <input type="text" id="correo" data-placeholder="nombre@correo.com">
+                                        </div>
+                                        <div id="celular" class="float-container">
+                                            <label for="celular">Celular</label>
+                                            <input type="text" id="celular" data-placeholder="Celular">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-two__title">
+                                <h1>Solicitud</h1>
+                                <div style="height: 1px" class="yellow-line"></div>
+                            </div>
+                            <div class="contacto-form-container">
+                                <div>
+                                    <label class="control-label" for="selectCtrl">Tipo de solicitud</label>
+                                    <select type="text" class="form-control" id="selectCtrl">
+                                        <option>Tipo de solicitud</option>
+                                        <option>PETICION</option>
+                                        <option>QUEJA</option>
+                                        <option>RECLAMO</option>
+                                        <option>SUGERENCIA</option>
+                                    </select>
+                                </div>
+                                <div style="padding-bottom: 3rem;">
+                                    <div id="asunto" class="float-container" style="width: 600px; height: 100px;">
+                                        <label for="asunto">Asunto</label>
+                                        <input type="text" id="asunto" data-placeholder="">
+                                    </div>
+                                </div>
+                                <div style="padding-bottom: 3rem;">
+                                    <div id="comentarios" class="float-container" style="width: 600px; height: 150px;">
+                                        <label for="comentarios">Comentarios</label>
+                                        <textarea name="text" id="comentarios" data-placeholder=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
                 <section class="footer">
                     <div class="footer__container">
                         <p>
@@ -164,4 +253,49 @@
         hamburger.classList.remove("open");
         navMenu.classList.remove("open");
     }));
+
+    const FloatLabel = (() => {
+  
+        // add active class and placeholder 
+        const handleFocus = (e) => {
+            const target = e.target;
+            target.parentNode.classList.add('active');
+            target.setAttribute('placeholder', target.getAttribute('data-placeholder'));
+        };
+        
+        // remove active class and placeholder
+        const handleBlur = (e) => {
+            const target = e.target;
+            if(!target.value) {
+            target.parentNode.classList.remove('active');
+            }
+            target.removeAttribute('placeholder');    
+        };  
+        
+        // register events
+        const bindEvents = (element) => {
+            const floatField = element.querySelector('input');
+            floatField.addEventListener('focus', handleFocus);
+            floatField.addEventListener('blur', handleBlur);
+        };
+        
+        // get DOM elements
+        const init = () => {
+            const floatContainers = document.querySelectorAll('.float-container');
+            
+            floatContainers.forEach((element) => {
+            if (element.querySelector('input').value) {
+                element.classList.add('active');
+            }
+            
+            bindEvents(element);
+            });
+        };
+        
+        return {
+            init: init
+        };
+    })();
+
+    FloatLabel.init();
 </script>

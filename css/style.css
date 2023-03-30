@@ -300,6 +300,40 @@ footer {
       .sdc-content-header__text p:hover, .sdc-content-header__text a:hover, .sdc-content-header__text i:hover {
         color: var(--color-grey-dark-2) !important; }
 
+/** float container */
+.float-container {
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  padding: 0 8px;
+  position: relative;
+  width: 300px;
+  /** active label */ }
+  .float-container input, .float-container textarea {
+    border: none;
+    font-size: 16px;
+    outline: 0;
+    padding: 16px 0 10px;
+    width: 100%;
+    height: 100%; }
+  .float-container label {
+    font-size: 16px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all .1s ease-in-out; }
+  .float-container.active label {
+    transform: translate(0, 4px) scale(0.75); }
+
+.contacto-form-container {
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column; }
+  .contacto-form-container .row {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem; }
+
 .section-one {
   margin-bottom: 3rem; }
   .section-one__container {
