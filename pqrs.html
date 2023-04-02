@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/sdc-icon.png">
 
@@ -12,7 +14,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-    <title>Servicios de Dragados y Construcciones SAS</title>
+    <title>Servicios de Dragados y Construcciones SAS - PQRS</title>
   </head>
   <body>
     <div class="container">
@@ -120,11 +122,11 @@
                 </section>
 
                 <section>
-                    <div style="padding: 4rem 6rem 0rem 8rem;">
+                    <div style="padding: 4rem 4rem 0rem 7rem;">
                         <p style="font-size: 1.8rem;">
                             <strong>
                                 En Servicios de Dragados y Construcciones reconocemos la importancia de
-                                nuestros clientes y empleados. Son nuestra razón de ser, contáctanos para darle
+                                nuestros clientes. Son nuestra razón de ser, contáctanos para darle
                                 la mejor atención a tus comentarios. Tu solicitud será atendida pronto.
                             </strong>
                         </p>
@@ -133,7 +135,7 @@
 
                 <section class="servicios-section-one">
                     <div>
-                        <form>
+                        <form action="form-process.php" method="POST" class="formcarry-form">
                             <div class="section-two__title">
                                 <h1>Información personal</h1>
                                 <div style="height: 1px" class="yellow-line"></div>
@@ -143,21 +145,21 @@
                                     <div class="row">
                                         <div id="nombres" class="float-container">
                                             <label for="nombres">Nombre(s)</label>
-                                            <input type="text" id="nombres" data-placeholder="Nombre(s)">
+                                            <input type="text" id="nombres" name="nombres" required data-placeholder="">
                                         </div>
                                         <div id="apellidos" class="float-container">
                                             <label for="apellidos">Apellido(s)</label>
-                                            <input type="text" id="apellidos" data-placeholder="Apellido(s)">
+                                            <input type="text" id="apellidos" name="apellidos" required data-placeholder="">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div id="correo" class="float-container">
                                             <label for="correo">Correo Electrónico</label>
-                                            <input type="text" id="correo" data-placeholder="nombre@correo.com">
+                                            <input type="text" id="correo" name="correo" required data-placeholder="">
                                         </div>
                                         <div id="celular" class="float-container">
                                             <label for="celular">Celular</label>
-                                            <input type="text" id="celular" data-placeholder="Celular">
+                                            <input type="text" id="celular" name="celular" required data-placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -166,9 +168,8 @@
                                 <h1>Solicitud</h1>
                                 <div style="height: 1px" class="yellow-line"></div>
                             </div>
-                            <div class="contacto-form-container">
-                                <div>
-                                    <label class="control-label" for="selectCtrl">Tipo de solicitud</label>
+                            <div style="padding: 3rem 7rem;" class="contacto-form-container">
+                                <div class="float-ddl-container">
                                     <select type="text" class="form-control" id="selectCtrl">
                                         <option>Tipo de solicitud</option>
                                         <option>PETICION</option>
@@ -180,15 +181,17 @@
                                 <div style="padding-bottom: 3rem;">
                                     <div id="asunto" class="float-container" style="width: 600px; height: 100px;">
                                         <label for="asunto">Asunto</label>
-                                        <input type="text" id="asunto" data-placeholder="">
+                                        <input type="text" id="asunto" name="asunto" required data-placeholder="">
                                     </div>
                                 </div>
                                 <div style="padding-bottom: 3rem;">
                                     <div id="comentarios" class="float-container" style="width: 600px; height: 150px;">
                                         <label for="comentarios">Comentarios</label>
-                                        <textarea name="text" id="comentarios" data-placeholder=""></textarea>
+                                        <textarea name="text" id="comentarios" name="comentarios" required data-placeholder=""></textarea>
                                     </div>
                                 </div>
+
+                                <button style="width: 8rem; height: 3rem; border-radius: 0;" type="submit">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -267,16 +270,22 @@
         const handleBlur = (e) => {
             const target = e.target;
             if(!target.value) {
-            target.parentNode.classList.remove('active');
+                target.parentNode.classList.remove('active');
             }
             target.removeAttribute('placeholder');    
         };  
         
         // register events
         const bindEvents = (element) => {
-            const floatField = element.querySelector('input');
-            floatField.addEventListener('focus', handleFocus);
-            floatField.addEventListener('blur', handleBlur);
+            if(element.querySelector('input')){
+                const floatField = element.querySelector('input');
+                floatField.addEventListener('focus', handleFocus);
+                floatField.addEventListener('blur', handleBlur);
+            } else {
+                const floatField = element.querySelector('textarea');
+                floatField.addEventListener('focus', handleFocus);
+                floatField.addEventListener('blur', handleBlur);
+            }
         };
         
         // get DOM elements
@@ -284,11 +293,17 @@
             const floatContainers = document.querySelectorAll('.float-container');
             
             floatContainers.forEach((element) => {
-            if (element.querySelector('input').value) {
-                element.classList.add('active');
-            }
+                if(element.querySelector('input')){
+                    if (element.querySelector('input').value) {
+                        element.classList.add('active');
+                    }
+                } else {
+                    if (element.querySelector('textarea').value) {
+                        element.classList.add('active');
+                    }
+                }
             
-            bindEvents(element);
+                bindEvents(element);
             });
         };
         
