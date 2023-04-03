@@ -134,7 +134,7 @@
 
                 <section class="servicios-section-one">
                     <div>
-                        <form action="form-process.php" method="POST" class="formcarry-form">
+                        <form method="POST" id="contact-form">
                             <div class="section-two__title">
                                 <h1>Información personal</h1>
                                 <div style="height: 1px" class="yellow-line"></div>
@@ -169,12 +169,12 @@
                             </div>
                             <div style="padding: 3rem 7rem;" class="contacto-form-container">
                                 <div class="float-ddl-container">
-                                    <select type="text" class="form-control" id="selectCtrl">
+                                    <select type="text" name="tipo" class="form-control" id="selectCtrl" required>
                                         <option>Tipo de solicitud</option>
-                                        <option>PETICION</option>
-                                        <option>QUEJA</option>
-                                        <option>RECLAMO</option>
-                                        <option>SUGERENCIA</option>
+                                        <option value="peticion">PETICION</option>
+                                        <option value="queja">QUEJA</option>
+                                        <option value="reclamo">RECLAMO</option>
+                                        <option value="sugerencia">SUGERENCIA</option>
                                     </select>
                                 </div>
                                 <div style="padding-bottom: 3rem;">
@@ -238,7 +238,7 @@
   </body>
 </html>
 
-<script>
+<script type="application/javascript">
     $('.servicios-link').click(function(){
         $('.side-nav__sub-item').toggleClass("show");
     })
@@ -312,4 +312,35 @@
     })();
 
     FloatLabel.init();
+
+    const form = document.getElementById("contact-form")
+
+    function email(data) {
+        // const message = document.getElementById("status-message")
+        fetch("/sendemail.php", {
+            method: "POST",
+            body: data,
+            headers: {
+               'X-Requested-With' : 'XMLHttpRequest'
+            }
+        })
+            .then(response => console.log(response.json()))
+            // .then(response => {message.innerHTML = response.message})
+            .catch(error => {
+                error.json().then(response => {
+                    // message.innerHTML = response.message
+                    console.log(response.message)
+                })
+            })
+    }
+
+
+    const submitEvent = form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+
+        email(formData);
+    })
+
 </script>
