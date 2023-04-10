@@ -301,39 +301,26 @@ footer {
         color: var(--color-grey-dark-2) !important; }
 
 /** float container */
-.float-container {
-  border: solid 1px #ccc;
-  box-sizing: border-box;
-  margin-bottom: 8px;
-  padding: 0 8px;
-  position: relative;
-  width: 300px;
-  height: 65px;
-  /** active label */ }
-  .float-container input, .float-container textarea {
-    border: none;
-    font-size: 16px;
-    outline: 0;
-    padding: 16px 0 16px;
-    width: 100%;
-    height: 100%; }
-  .float-container label {
-    font-size: 16px;
-    position: absolute;
-    transform-origin: top left;
-    transform: translate(0, 16px) scale(1);
-    transition: all .1s ease-in-out; }
-  .float-container.active label {
-    transform: translate(0, 4px) scale(0.75); }
-
 .contacto-form-container {
   padding: 2rem 6rem;
   display: flex;
   flex-direction: column; }
-  .contacto-form-container .row {
-    display: flex;
-    gap: 3rem;
-    padding: 1rem; }
+
+.flex-row {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  padding: 1rem; }
+
+.pqrs-input {
+  flex: 1;
+  max-width: 350px;
+  height: 45px; }
+  .pqrs-input input {
+    height: 100% !important;
+    width: 100% !important; }
+  .pqrs-input label {
+    font-size: 1.5rem !important; }
 
 .float-ddl-container {
   border: solid 1px #ccc;
