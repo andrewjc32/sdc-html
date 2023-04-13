@@ -136,7 +136,7 @@
 
                 <section class="servicios-section-one">
                     <div>
-                        <form action="sendemail.php" method="POST" id="contact-form">
+                        <form action="contact.php" method="POST" id="contact-form">
                             <div class="section-two__title">
                                 <h1>Información personal</h1>
                                 <div style="height: 1px" class="yellow-line"></div>
@@ -176,10 +176,10 @@
                                 <div style="padding-bottom: 3rem" class="form-floating">
                                     <select style="height: 55px; width: 300px; font-size: 1.5rem;" class="form-select" id="tipo" name="tipo" aria-label="Floating label select example">
                                         <option selected>Tipo de solicitud</option>
-                                        <option value="peticion">PETICION</option>
-                                        <option value="queja">QUEJA</option>
-                                        <option value="reclamo">RECLAMO</option>
-                                        <option value="sugerencia">SUGERENCIA</option>
+                                        <option value="Petición">PETICION</option>
+                                        <option value="Queja">QUEJA</option>
+                                        <option value="Reclamo">RECLAMO</option>
+                                        <option value="Sugerencia">SUGERENCIA</option>
                                     </select>
                                     <label for="tipo">Tipo de solicitud</label>
                                 </div>
@@ -317,34 +317,23 @@
 
     FloatLabel.init();
 
-    const form = document.getElementById("contact-form")
+    $('#contact-form').on('submit', function (e) {
+        console.log('form submit')
+        // if the validator does not prevent form submit
+        // if (!e.isDefaultPrevented()) {
+             var url = "contact.php";
 
-    function email(data) {
-        // const message = document.getElementById("status-message")
-        fetch("sendemail.php", {
-            method: "POST",
-            body: data,
-            headers: {
-               'X-Requested-With' : 'XMLHttpRequest'
-            }
+            // POST values in the background the the script URL
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    alert('success')
+                    window.location = "http://localhost/pqrs.html"
+                }
+            });
         })
-            .then(response => console.log(response.json()))
-            // .then(response => {message.innerHTML = response.message})
-            .catch(error => {
-                error.json().then(response => {
-                    // message.innerHTML = response.message
-                    console.log(response.message)
-                })
-            })
-    }
-
-
-    const submitEvent = form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-
-        email(formData);
-    })
 
 </script>
