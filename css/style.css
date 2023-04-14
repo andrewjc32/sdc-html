@@ -74,12 +74,14 @@ body {
       border-right: 1.5px solid var(--color-grey-light-4); } }
 
 .sdc-content {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   background-color: #fff; }
 
-footer {
-  background: black;
-  padding: 10px 20px; }
+.footer {
+  margin-top: auto; }
 
 .show {
   display: block !important; }
@@ -219,9 +221,11 @@ footer {
         color: var(--color-grey-dark-1);
         text-decoration: none; }
 
-@media only screen and (min-width: 56.25em) {
-  .sdc-sidebar-logo {
-    display: none; } }
+.sdc-sidebar-logo {
+  margin: auto; }
+  @media only screen and (min-width: 56.25em) {
+    .sdc-sidebar-logo {
+      display: none; } }
 
 .hamburger {
   display: none;
@@ -300,7 +304,6 @@ footer {
       .sdc-content-header__text p:hover, .sdc-content-header__text a:hover, .sdc-content-header__text i:hover {
         color: var(--color-grey-dark-2) !important; }
 
-/** float container */
 .contacto-form-container {
   padding: 2rem 6rem;
   display: flex;
@@ -310,33 +313,8 @@ footer {
   display: flex;
   gap: 3rem;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1rem; }
-
-.pqrs-input {
-  flex: 1;
-  max-width: 350px;
-  height: 45px; }
-  .pqrs-input input {
-    height: 100% !important;
-    width: 100% !important; }
-  .pqrs-input label {
-    font-size: 1.5rem !important; }
-
-.float-ddl-container {
-  border: solid 1px #ccc;
-  box-sizing: border-box;
-  margin-bottom: 3rem;
-  padding: 0 8px;
-  position: relative;
-  width: 300px;
-  height: 65px; }
-  .float-ddl-container select {
-    border: none;
-    font-size: 16px;
-    outline: 0;
-    padding: 16px 0 16px;
-    width: 100%;
-    height: 100%; }
 
 .section-one {
   margin-bottom: 3rem; }
@@ -362,6 +340,9 @@ footer {
     position: absolute;
     top: 20%;
     right: 10%; }
+    @media only screen and (max-width: 550px) {
+      .section-one__sub-title {
+        display: none; } }
     .section-one__sub-title h1:first-child {
       text-decoration: underline; }
   .section-one__btn {
@@ -374,6 +355,9 @@ footer {
     text-decoration: none;
     color: #000;
     font-size: 1.2rem; }
+    @media only screen and (max-width: 550px) {
+      .section-one__btn {
+        display: none; } }
 
 .section-two {
   margin-bottom: 3rem; }
@@ -397,6 +381,9 @@ footer {
   .section-two__container {
     padding: 1rem 4rem;
     display: flex; }
+    @media only screen and (max-width: 550px) {
+      .section-two__container {
+        flex-direction: column; } }
   .section-two__card {
     flex: 1; }
   .section-two__btn-div {
@@ -427,6 +414,9 @@ footer {
     position: absolute;
     top: 15%;
     left: 10%; }
+    @media only screen and (max-width: 550px) {
+      .section-three h1 {
+        display: none; } }
   .section-three__text-one {
     position: absolute;
     bottom: 35%;
@@ -434,6 +424,9 @@ footer {
     font-size: 1.4rem;
     color: #fff;
     text-align: left; }
+    @media only screen and (max-width: 550px) {
+      .section-three__text-one {
+        display: none; } }
   .section-three__text-two {
     position: absolute;
     bottom: 20%;
@@ -441,6 +434,9 @@ footer {
     font-size: 1.4rem;
     color: #fff;
     text-align: left; }
+    @media only screen and (max-width: 550px) {
+      .section-three__text-two {
+        display: none; } }
   .section-three__btn {
     position: absolute;
     bottom: 10%;
@@ -451,6 +447,9 @@ footer {
     text-decoration: none;
     color: #000;
     font-size: 1.2rem; }
+    @media only screen and (max-width: 550px) {
+      .section-three__btn {
+        display: none; } }
 
 .section-four {
   margin-bottom: 3rem; }
@@ -475,6 +474,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 6rem 2rem; }
+    @media only screen and (max-width: 550px) {
+      .section-four__container {
+        flex-direction: column; } }
     .section-four__container:last-child {
       gap: 1rem; }
     .section-four__container p {
@@ -528,6 +530,9 @@ footer {
     position: absolute;
     top: 12%;
     right: 10%; }
+    @media only screen and (max-width: 550px) {
+      .section-five h1 {
+        display: none; } }
   .section-five p {
     position: absolute;
     bottom: 15%;
@@ -535,6 +540,9 @@ footer {
     font-size: 1.4rem;
     color: #fff;
     text-align: left; }
+    @media only screen and (max-width: 550px) {
+      .section-five p {
+        display: none; } }
   .section-five__btn {
     position: absolute;
     bottom: 15%;
@@ -568,6 +576,9 @@ footer {
   .section-six__container {
     padding: 1rem 4rem;
     display: flex; }
+    @media only screen and (max-width: 550px) {
+      .section-six__container {
+        flex-direction: column; } }
   .section-six__card {
     flex: 1; }
   .section-six__btn-div {
@@ -594,6 +605,9 @@ footer {
       color: #fff;
       font-size: 5rem;
       text-align: left; }
+      @media only screen and (max-width: 550px) {
+        .section-seven__container h1 {
+          display: none; } }
     .section-seven__container p {
       position: absolute;
       bottom: 15%;
@@ -601,6 +615,9 @@ footer {
       color: #fff;
       font-size: 1.5rem;
       text-align: left; }
+      @media only screen and (max-width: 550px) {
+        .section-seven__container p {
+          display: none; } }
   .section-seven__logo {
     position: absolute;
     top: 15%;
@@ -639,6 +656,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 6rem 2rem; }
+    @media only screen and (max-width: 550px) {
+      .section-eight__container {
+        flex-direction: column; } }
     .section-eight__container:last-child {
       justify-content: flex-start; }
     .section-eight__container p {
@@ -654,6 +674,9 @@ footer {
     background-color: var(--color-grey-light-2);
     padding: 2rem 3rem;
     width: 50%; }
+    @media only screen and (max-width: 550px) {
+      .section-eight__card {
+        width: 100%; } }
     .section-eight__card:last-child {
       text-align: right; }
     .section-eight__card h2 {

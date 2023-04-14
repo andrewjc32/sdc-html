@@ -34,6 +34,10 @@
         top: 20%;
         right: 10%;
 
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
+
         h1:first-child {
             text-decoration: underline;
         }
@@ -50,6 +54,10 @@
         text-decoration: none;
         color: #000;
         font-size: 1.2rem;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 }
 
@@ -85,6 +93,10 @@
         padding: 1rem 4rem;
 
         display: flex;
+        
+        @media only screen and (max-width: 550px) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -129,6 +141,10 @@
         position: absolute;
         top: 15%;
         left: 10%;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 
     &__text-one {
@@ -139,6 +155,10 @@
         font-size: 1.4rem;
         color: #fff;
         text-align: left;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 
     &__text-two {
@@ -149,6 +169,10 @@
         font-size: 1.4rem;
         color: #fff;
         text-align: left;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 
     &__btn {
@@ -162,6 +186,10 @@
         text-decoration: none;
         color: #000;
         font-size: 1.2rem;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 }
 
@@ -197,6 +225,10 @@
         display: flex;
         justify-content: space-evenly;
         margin: 1rem 6rem 2rem;
+
+        @media only screen and (max-width: 550px) {
+            flex-direction: column;
+        }
 
         &:last-child {
             gap: 1rem;
@@ -278,6 +310,10 @@
         position: absolute;
         top: 12%;
         right: 10%;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 
     p {
@@ -288,6 +324,10 @@
         font-size: 1.4rem;
         color: #fff;
         text-align: left;
+
+        @media only screen and (max-width: 550px) {
+            display: none;
+        }
     }
 
     &__btn {
@@ -336,6 +376,10 @@
         padding: 1rem 4rem;
 
         display: flex;
+
+        @media only screen and (max-width: 550px) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -372,6 +416,10 @@
             color: #fff;
             font-size: 5rem;
             text-align: left;
+
+            @media only screen and (max-width: 550px) {
+                display: none;
+            }
         }
 
         p {
@@ -382,6 +430,10 @@
             color: #fff;
             font-size: 1.5rem;
             text-align: left;
+
+            @media only screen and (max-width: 550px) {
+                display: none;
+            }
         }
     }
 
@@ -438,6 +490,10 @@
         justify-content: space-evenly;
         margin: 1rem 6rem 2rem;
 
+        @media only screen and (max-width: 550px) {
+            flex-direction: column;
+        }
+
         &:last-child {
             justify-content: flex-start;
         }
@@ -460,6 +516,10 @@
         background-color: var(--color-grey-light-2);
         padding: 2rem 3rem;
         width: 50%;
+
+        @media only screen and (max-width: 550px) {
+            width: 100%;
+        }
 
         &:last-child {
             text-align: right;

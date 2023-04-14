@@ -42,11 +42,15 @@
 }
 
 .sdc-content {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 
     background-color: #fff;
 }
-footer {
-    background: black;
-    padding: 10px 20px;
+.footer {
+    margin-top: auto;
+    //background: black;
+    //padding: 10px 20px;
 }

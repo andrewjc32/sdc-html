@@ -41,7 +41,7 @@ try {
 
     $mail->AltBody = 'Body in plain text for non-HTML mail clients';
     $mail->send();
-    echo "Mail has been sent successfully!";
+    header('Location: gracias.html');
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

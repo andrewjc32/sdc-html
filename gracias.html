@@ -10,9 +10,8 @@
     <link rel="shortcut icon" type="image/png" href="images/sdc-icon.png">
 
     <script src="https://use.fontawesome.com/13b2d830e4.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcGRoElAAAAALXMcKfwH9YagjipOfRw0RXcyDFq"></script>
 
     <title>Servicios de Dragados y Construcciones SAS - PQRS</title>
   </head>
@@ -125,84 +124,12 @@
                     <div style="padding: 4rem 4rem 0rem 7rem;">
                         <p style="font-size: 1.8rem;">
                             <strong>
-                                En Servicios de Dragados y Construcciones reconocemos la importancia de
-                                nuestros clientes. Son nuestra razón de ser, contáctanos para darle
-                                la mejor atención a tus comentarios. Tu solicitud será atendida pronto.
+                                Gracias por enviarnos sus comentarios!
                             </strong>
                         </p>
                     </div>
                 </section>
 
-                <section class="servicios-section-one">
-                    <div>
-                        <form action="contact.php" method="POST" id="contact-form">
-                            <div class="section-two__title">
-                                <h1>Información personal</h1>
-                                <div style="height: 1px" class="yellow-line"></div>
-                            </div>
-                            <div>
-                                <div class="contacto-form-container">
-                                    <div class="flex-row">
-
-                                        <div class="form-floating">
-                                            <input required style="height: 55px; max-width: 350px; min-width: 280px; font-size: 1.5rem;" type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre(s)">
-                                            <label style="font-size: 1.5rem;" for="firstName">Nombre(s)</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input required style="height: 55px; max-width: 350px; min-width: 280px; font-size: 1.5rem;" type="text" class="form-control" name="lastName" id="lastName" placeholder="Apellido(s)">
-                                            <label style="font-size: 1.5rem;" for="lastName">Apellido(s)</label>
-                                        </div>
-                                    </div>
-                                    <div class="flex-row">
-
-                                        <div class="form-floating">
-                                            <input required style="height: 55px; max-width: 350px; min-width: 280px; font-size: 1.5rem;" type="email" class="form-control" id="email" name="email" placeholder="correo@dominio.com">
-                                            <label style="font-size: 1.5rem;" for="email">Correo Electrónico</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input required style="height: 55px; max-width: 350px; min-width: 280px; font-size: 1.5rem;" type="text" class="form-control" name="number" id="number" placeholder="Celular">
-                                            <label style="font-size: 1.5rem;" for="number">Celular</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section-two__title">
-                                <h1>Solicitud</h1>
-                                <div style="height: 1px" class="yellow-line"></div>
-                            </div>
-                            <div style="padding: 3rem 7rem;" class="contacto-form-container">
-
-                                <div style="padding-bottom: 3rem" class="form-floating">
-                                    <select required style="height: 55px; max-width: 300px; font-size: 1.5rem;" class="form-select" id="tipo" name="tipo" aria-label="Floating label select example">
-                                        <option selected>Tipo de solicitud</option>
-                                        <option value="Petición">PETICION</option>
-                                        <option value="Queja">QUEJA</option>
-                                        <option value="Reclamo">RECLAMO</option>
-                                        <option value="Sugerencia">SUGERENCIA</option>
-                                    </select>
-                                    <label for="tipo">Tipo de solicitud</label>
-                                </div>
-
-                                <div style="padding-bottom: 3rem;" class="form-floating">
-                                    <input required style="height: 65px; max-width: 730px; font-size: 1.5rem; padding: 2.2rem 0.75rem;" type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto">
-                                    <label style="font-size: 1.5rem;" for="asunto">Asunto</label>
-                                </div>
-
-                                <div style="padding-bottom: 3rem;" class="form-floating">
-                                    <textarea required style="height: 100px; max-width: 730px; font-size: 1.5rem; padding: 2.2rem 0.75rem;" class="form-control" placeholder="Leave a comment here" name="comentarios" id="floatingTextarea"></textarea>
-                                    <label style="font-size: 1.5rem;" for="floatingTextarea">Comentarios</label>
-                                </div>
-
-                                <button 
-                                    data-sitekey="6LcGRoElAAAAALXMcKfwH9YagjipOfRw0RXcyDFq"
-                                    class="btn btn-secondary g-recaptcha"
-                                    data-callback='onSubmit'
-                                    style="width: 8rem; height: 4rem; font-size: 1.5rem; border-radius: 4px; margin-top: 3rem;" 
-                                    data-action='submit'>Enviar</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
                 <section class="footer">
                     <div class="footer__container">
                         <p>
@@ -320,32 +247,5 @@
     })();
 
     FloatLabel.init();
-
-    function onSubmit (token) {
-        document.getElementById("demo-form").submit();
-    }
-
-    $('#contact-form').on('submit', function (e) {
-        console.log('form submit')
-        // if the validator does not prevent form submit
-        // if (!e.isDefaultPrevented()) {
-             var url = "contact.php";
-
-            // POST values in the background the the script URL
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    alert('success');
-                    window.location = "http://localhost/gracias.html";
-                },
-                error: function (data) {
-                    alert('there was an error');
-                    window.location = "http://localhost/pqrs.html";
-                }
-            });
-        })
 
 </script>
