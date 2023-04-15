@@ -865,6 +865,9 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 3rem; }
+    @media only screen and (max-width: 550px) {
+      .servicios-section-four__licencia-dimar {
+        flex-direction: column; } }
     .servicios-section-four__licencia-dimar .servicios-section-four-dimar-img {
       flex: 1; }
       .servicios-section-four__licencia-dimar .servicios-section-four-dimar-img img {
@@ -882,6 +885,10 @@ body {
       max-width: 30%;
       height: auto;
       margin-left: 5rem; }
+      @media only screen and (max-width: 550px) {
+        .servicios-section-four__ruc .ruc-img img {
+          max-width: 100%;
+          margin-left: 0; } }
 
 .maquinaria-section-one {
   padding: 6rem 6rem; }
@@ -1080,6 +1087,9 @@ body {
   .nosotros-section-one__container p {
     width: 50%;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 550px) {
+      .nosotros-section-one__container p {
+        width: 100%; } }
 
 .nosotros-green-line {
   background-color: var(--color-green-1);

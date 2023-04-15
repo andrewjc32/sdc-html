@@ -233,6 +233,10 @@
 
     padding: 3rem;
 
+    @media only screen and (max-width: 550px) {
+      flex-direction: column;
+  }
+
     .servicios-section-four-dimar-img {
       flex: 1;
 
@@ -262,6 +266,11 @@
         max-width: 30%;
         height: auto;
         margin-left: 5rem;
+
+        @media only screen and (max-width: 550px) {
+          max-width: 100%;
+          margin-left: 0;
+        }
       }
     }
   }
